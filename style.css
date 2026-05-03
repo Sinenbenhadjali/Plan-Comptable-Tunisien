@@ -124,31 +124,31 @@ header h1 {
 /* Class Cards */
 .class-grid {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .class-card {
   background: var(--bg-secondary);
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: var(--card-shadow);
   border-left: 5px solid var(--class-color);
-  min-height: 70px;
+  min-height: 80px;
 }
 
 @media (max-height: 750px) {
-  .class-grid { gap: 8px; }
-  .class-card { padding: 8px 12px; min-height: 60px; }
+  .class-grid { gap: 10px; }
+  .class-card { padding: 10px 14px; min-height: 65px; }
   .class-number { font-size: 1.5rem; }
-  .class-info h3 { font-size: 0.95rem; }
-  header { padding: 8px 16px; }
-  header h1 { font-size: 1.1rem; }
-  .screen { padding: 10px; }
+  .class-info h3 { font-size: 1rem; }
+  header { padding: 10px 16px; }
+  header h1 { font-size: 1.15rem; }
+  .screen { padding: 12px; }
 }
 
 .class-card:active {
@@ -156,22 +156,22 @@ header h1 {
 }
 
 .class-number {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--class-color);
   opacity: 0.8;
-  min-width: 36px;
+  min-width: 38px;
   text-align: center;
 }
 
 .class-info h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 2px;
   line-height: 1.2;
 }
 
 .class-count {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
 }
 
