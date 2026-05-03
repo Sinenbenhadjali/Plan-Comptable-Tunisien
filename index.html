@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Plan Comptable Tunisien</title>
+  <link rel="icon" type="image/png" href="pct_logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Header (shared by some screens) -->
+    <header id="main-header">
+      <div class="header-content">
+        <h1 id="header-title">Accueil</h1>
+      </div>
+    </header>
+
+    <!-- Navigation Header (for details) -->
+    <header id="nav-header" style="display: none;">
+      <div class="header-with-back">
+        <button class="back-btn" id="global-back">←</button>
+        <h1 id="nav-title">Classe</h1>
+      </div>
+    </header>
+
+    <!-- Main Screens Container -->
+    <main id="screens">
+      
+      <!-- 1. Accueil -->
+      <section id="screen-home" class="screen active">
+        <div class="class-grid" id="class-grid">
+          <!-- Class cards injected here -->
+        </div>
+      </section>
+
+      <!-- 2. Recherche Globale -->
+      <section id="screen-search" class="screen">
+        <div class="search-container">
+          <input type="text" id="global-search-input" class="search-input" placeholder="Rechercher par code ou libellé..." autofocus>
+        </div>
+        <div id="global-search-results">
+          <!-- Results injected here -->
+          <div class="empty-state">Commencez à taper pour rechercher...</div>
+        </div>
+      </section>
+
+      <!-- 3. Favoris -->
+      <section id="screen-favorites" class="screen">
+        <div id="favorites-list">
+          <!-- Favorites injected here -->
+        </div>
+      </section>
+
+      <!-- 4. Class Detail -->
+      <section id="screen-class-detail" class="screen">
+        <div class="search-container">
+          <input type="text" id="class-search-input" class="search-input" placeholder="Filtrer dans cette classe...">
+        </div>
+        <div id="class-tree-container">
+          <!-- Tree injected here -->
+        </div>
+        <div id="class-filtered-list" style="display: none;">
+          <!-- Filtered list injected here -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Tab Bar -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item active" data-screen="home">
+        <span class="nav-icon">🏠</span>
+        <span>Accueil</span>
+      </a>
+      <a href="#" class="nav-item" data-screen="search">
+        <span class="nav-icon">🔍</span>
+        <span>Recherche</span>
+      </a>
+      <a href="#" class="nav-item" data-screen="favorites">
+        <span class="nav-icon">⭐</span>
+        <span>Favoris</span>
+      </a>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Copie</div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
